@@ -1,0 +1,20 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(Computational-Graph)
+
+ADD_DEFINITIONS(-std=c++14)
+ADD_SUBDIRECTORY(lib)
+ADD_SUBDIRECTORY(basic_calc_pack)
+ADD_SUBDIRECTORY(advanced_calc_pack)
+ADD_SUBDIRECTORY(compare_calc_pack)
+
+ADD_EXECUTABLE(main1 period1.cpp)
+ADD_EXECUTABLE(main2 period2.cpp)
+ADD_EXECUTABLE(main3 newton.cpp)
+ADD_EXECUTABLE(main4 tensor_demo.cpp)
+ADD_EXECUTABLE(main5 nn.cpp)
+
+TARGET_LINK_LIBRARIES(main1 Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
+TARGET_LINK_LIBRARIES(main2 Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
+TARGET_LINK_LIBRARIES(main3 Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
+TARGET_LINK_LIBRARIES(main4 Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
+TARGET_LINK_LIBRARIES(main5 Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
