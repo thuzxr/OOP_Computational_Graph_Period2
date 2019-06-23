@@ -2,7 +2,7 @@
 
 ## 项目说明
 
-本项目是清华大学2019年《面向对象程序设计基础》的计算图大作业第二阶段，在第一阶段代码基础上迭代开发。在此感谢第一阶段开发者，以及第二阶段合作开发者[@XIA943188]("https://github.com/XIA943188")
+本项目是清华大学2019年《面向对象程序设计基础》的计算图大作业第二阶段，在第一阶段代码基础上迭代开发。在此感谢第一阶段开发者，以及第二阶段合作开发者[@XIA943188](https://github.com/XIA943188)
 
 ## 运行环境
 
@@ -219,21 +219,3 @@ $ make
 ### `Dimension Mismatches` 和 `The rank in target is out of range`
 
 计算误差时形状不匹配
-
-## 如果你想用我的库
-
-请按如下格式编写 `CMakeLists.txt`
-
-```cmake
-CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
-PROJECT(YOUR_PROJECT) #YOUR_PROJECT_NAME是你的工程名
-
-ADD_SUBDIRECTORY(lib)
-ADD_SUBDIRECTORY(basic_calc_pack)
-ADD_SUBDIRECTORY(advanced_calc_pack)
-ADD_SUBDIRECTORY(compare_calc_pack)
-
-ADD_EXECUTABLE(YOUR_EXECUTABLE ...) #YOUR_EXECUTABLE是你想编译的可执行文件名；...为该可执行文件依赖的你编写的所有源文件
-TARGET_LINK_LIBRARIES(YOUR_EXECUTABLE Lib Basic_Calc_Pack Advanced_Calc_Pack Compare_Calc_Pack)
-#如果你要生成多个可执行文件，请多次使用以上两行语句
-```
